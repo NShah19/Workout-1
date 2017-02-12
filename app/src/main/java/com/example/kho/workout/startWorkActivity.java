@@ -50,7 +50,7 @@ public class startWorkActivity extends AppCompatActivity implements TextToSpeech
     }
 
     private void speakOutNow (){
-        String text = "Beginning Workout";
+        String text = "Beginning Workout. Say done to move onto next exercise.";
         tts.speak(text, TextToSpeech.QUEUE_FLUSH, null);
     }
 }
