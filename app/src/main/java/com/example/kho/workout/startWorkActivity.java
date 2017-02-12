@@ -2,55 +2,116 @@ package com.example.kho.workout;
 
 import android.content.Intent;
 import android.speech.RecognizerIntent;
+import android.speech.tts.TextToSpeech;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 
 import java.util.List;
+import java.util.Locale;
 
-public class startWorkActivity extends AppCompatActivity {
-    private static final int SPEECH_REQUEST_CODE = 0;
-    Button startWorkout;
+import static android.speech.tts.TextToSpeech.Engine.KEY_PARAM_STREAM;
+
+public class startWorkActivity extends AppCompatActivity{
+    private TextToSpeech tts;
+    private Button speakButton;
+    private EditText inputText;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start_work);
 
-        startWorkout = (Button)findViewById(R.id.startButton);
-        startWorkout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                
-            }
-        });
-
+//        inputText = (EditText) findViewById(R.id.editText1);
+//        tts = new TextToSpeech(this, this);
+//
+//        speakButton = (Button) findViewById(R.id.button1);
+//        // button on click event
+//        speakButton.setOnClickListener(new View.OnClickListener() {
+//
+//            @Override
+//            public void onClick(View arg0) {
+//                speakText();
+//            }
+//
+//        });
     }
 
-    // Create an intent that can start the Speech Recognizer activity
-    private void displaySpeechRecognizer() {
-        Intent intent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
-        intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL,
-                RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);
-// Start the activity, the intent will be populated with the speech text
-        startActivityForResult(intent, SPEECH_REQUEST_CODE);
-    }
+//    @Override
+//    public void onDestroy() {
+//        // Don't forget to shutdown tts!
+//        if (tts != null) {
+//            tts.stop();
+//            tts.shutdown();
+//        }
+//        super.onDestroy();
+//    }
+//
+//    @Override
+//    public void onInit(int status) {
+//
+//        if (status == TextToSpeech.SUCCESS) {
+//
+//            int result = tts.setLanguage(Locale.US);
+//
+//            if (result == TextToSpeech.LANG_MISSING_DATA
+//                    || result == TextToSpeech.LANG_NOT_SUPPORTED) {
+//                Log.e("TTS", "This Language is not supported");
+//            } else {
+//                speakButton.setEnabled(true);
+//                speakText();
+//            }
+//
+//        } else {
+//            Log.e("TTS", "Initilization Failed!");
+//        }
+//
+//    }
+//
+//    private void speakText() {
+//
+//        CharSequence toSpeak = inputText.getText().toString();
+//
+//        tts.speak(toSpeak, TextToSpeech.QUEUE_FLUSH, null);
+//    }
 
-    // This callback is invoked when the Speech Recognizer returns.
-// This is where you process the intent and extract the speech text from the intent.
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode,
-                                    Intent data) {
-        if (requestCode == SPEECH_REQUEST_CODE && resultCode == RESULT_OK) {
-            List<String> results = data.getStringArrayListExtra(
-                    RecognizerIntent.EXTRA_RESULTS);
-            String spokenText = results.get(0);
-            Log.d(spokenText, index += 1);
-            // Do something with spokenText
-        }
-        super.onActivityResult(requestCode, resultCode, data);
-    }
+//    private static final int SPEECH_REQUEST_CODE = 0;
+//    Button startWorkout;
+//    TextToSpeech engine;
+//
+//
+//    @Override
+//    protected void onCreate(Bundle savedInstanceState) {
+//        super.onCreate(savedInstanceState);
+//        setContentView(R.layout.activity_start_work);
+//
+//        engine = new TextToSpeech(this, this);
+//
+//        startWorkout = (Button)findViewById(R.id.startButton);
+//        startWorkout.setOnClickListener(new View.OnClickListener() {
+//            public void onClick(View view) {
+////                speech();
+//                engine.speak("Beginning", TextToSpeech.QUEUE_ADD, Bundle(KEY_PARAM_STREAM), "ID");
+//            }
+//        });
+//
+//    }
+//
+//    @Override
+//    public void onInit(int status) {
+//        Log.d("Speech", "OnInit - Status ["+status+"]");
+//        if (status == TextToSpeech.SUCCESS) {
+//            Log.d("Speech", "Success!");
+//            engine.setLanguage(Locale.UK);
+//        }
+//    }
+//
+//
+//    private void speech() {
+//        engine.speak("Beginning Workout.  Say Done to continue exercise.", TextToSpeech.QUEUE_FLUSH, null, null);
+//    }
 
 }

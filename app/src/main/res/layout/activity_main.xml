@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
@@ -58,5 +59,15 @@
         android:background="@drawable/round_button"
         android:layout_marginTop="17dp"
         android:layout_below="@+id/homePageText"
+        android:layout_alignParentStart="true" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:srcCompat="@mipmap/ic_launcher1"
+        android:id="@+id/imageView"
+        android:adjustViewBounds="false"
+        android:layout_marginTop="37dp"
+        android:layout_alignTop="@+id/optionsButton"
         android:layout_alignParentStart="true" />
 </RelativeLayout>
