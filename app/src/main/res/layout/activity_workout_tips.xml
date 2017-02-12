@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.kho.workout.workoutTips">
+
+    <TextView
+        android:text="Workout Tips"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="27sp"
+        android:id="@+id/textView"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentStart="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:weightSum="1">
+
+            <TextView
+                android:text="WarmUps"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="17dp"
+                android:textSize="27sp"
+                android:id="@+id/textView6" />
+
+            <Button
+                android:text="Arm Circles"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/round_button"
+                android:layout_below="@+id/textView6"
+                android:layout_alignParentStart="true"
+                android:id="@+id/armCircleButton"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Keeping your elbow straight, swing your arm in a circle from behind to in front. 1 revolution counts as 1 rep. Repeat for the opposite direction. Perform for 10 circles per direction for each arm. "
+                android:id="@+id/armCircleText"
+                android:textSize="16sp"
+                android:layout_below="@id/armCircleButton"
+                android:visibility="gone"/>
+
+            <Button
+                android:text="Planks"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/round_button"
+                android:layout_below="@id/armCircleButton"
+                android:id="@+id/planksButton" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Support yourself on the ground with either your hands or elbows. Keeping your back straight, hold this exercise for time. Perform for 30s, and slowly increase your time."
+                android:id="@+id/plankText"
+                android:textSize="16sp"
+                android:layout_below="@id/planksButton"
+                android:visibility="gone"/>
+
+            <Button
+                android:text="Shoulder Circles"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/round_button"
+                android:id="@+id/shoulderCirclesButton"
+                android:layout_alignParentStart="true"
+                android:layout_below="@id/planksButton"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Relax your arms by your side, and shrug your shoulders in a circle. Repeat for the opposite direction. Perform 10 reps per direction for each arm."
+                android:id="@+id/shoulderCirclesText"
+                android:textSize="16sp"
+                android:layout_below="@id/shoulderCirclesButton"
+                android:visibility="gone"/>
+
+            <TextView
+                android:text=""
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/shoulderCirclesButton"
+                android:textSize="27sp"
+                android:id="@+id/blank" />
+
+            <TextView
+                android:text="Exercises"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="27sp"
+                android:id="@+id/textView7"
+                android:layout_below="@id/blank"
+                android:layout_weight="2.71" />
+
+            <Button
+                android:text="Bench Press"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/round_button"
+                android:layout_below="@id/textView7"
+                android:id="@+id/benchPressButton" />
+
+            <TextView
+                android:text="Adjust the weight by adding or removing plates as necessary. Remember, the bar weighs 45 lbs. If this is too heavy for you, you may use dumbbells in place of a bar. Lay down facing upwards on the bench with the bar above you. Lift the bar out of the rack. Keeping your elbows at a 45 degree angle, lower the bar and raise it again. Perform for 3 sets of 8-12 reps."
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/benchPressText"
+                android:textSize="16sp"
+                android:layout_below="@id/benchPressButton"
+                android:layout_weight="2.71"
+                android:visibility="gone"/>
+
+            <Button
+                android:text="Deadlift"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/round_button"
+                android:layout_below="@id/benchPressText"
+                android:id="@+id/deadliftButton" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Start with a bar slightly in front of your shins. Let your knees bend and while hinging at the hips grip the bar. Keeping your back rigid, push through your feet and straighten your posture. Slowly lower the bar back to the starting position. Perform for 3 sets of 8-12 reps."
+                android:id="@+id/deadliftText"
+                android:textSize="16sp"
+                android:layout_below="@id/deadliftButton"
+                android:visibility="gone"/>
+
+            <Button
+                android:text="Dips"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/round_button"
+                android:layout_below="@id/deadliftText"
+                android:id="@+id/dipsButton" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Supporting yourself on parallel bars with just your hands, push your shoulders down so your shoulders are not next to your ears. Lower yourself until your elbows make a 90 degree angle, and then push yourself up, without letting your shoulders shrug upwards. Perform for 3 sets of 8-12 reps."
+                android:id="@+id/dipsText"
+                android:textSize="16sp"
+                android:layout_below="@id/dipsButton"
+                android:visibility="gone"/>
+
+            <Button
+                android:text="Inverted Rows"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/round_button"
+                android:layout_below="@id/dipsText"
+                android:id="@+id/invertedRowsButton" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Grab a ledge or bar at slightly wider than shoulder width and assume an inverted push up stance, with your chest angled upwards and your back rigid. Pull your elbows backward until your chest touches the bar, and return to the starting position whilst retaining tension."
+                android:id="@+id/invertedRowsText"
+                android:textSize="16sp"
+                android:layout_below="@id/invertedRowsButton"
+                android:visibility="gone"/>
+
+            <Button
+                android:text="Knee Lifts"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/round_button"
+                android:layout_below="@id/invertedRowsText"
+                android:id="@+id/kneeLiftsButton" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Start by either hanging from a bar or supporting yourself on parallel bars. Bring your knees to your chest, but be careful not to swing excessively. If this is too easy, try the straight leg lift. With your legs straight, lift your legs until they make a 90 degree angle with your torso. Perform for 3 sets of 8-12 reps."
+                android:id="@+id/kneeLiftsText"
+                android:textSize="16sp"
+                android:layout_below="@id/kneeLiftsButton"
+                android:visibility="gone"/>
+
+            <Button
+                android:text="Lat Pulldown"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/round_button"
+                android:layout_below="@id/kneeLiftsText"
+                android:id="@+id/latPulldownButton" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Reach up and grip the bar at slightly wider than shoulder width. Sit down with your hips firmly secured under the supports. Leaning slightly back, pull the bar down to your collarbones and carefully return to the starting position. Perform for 3 sets of 8-12 reps."
+                android:id="@+id/latPulldownText"
+                android:textSize="16sp"
+                android:layout_below="@id/latPulldownButton"
+                android:visibility="gone"/>
+
+            <Button
+                android:text="Pullups"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/round_button"
+                android:layout_below="@id/latPulldownText"
+                android:id="@+id/pullupsButton" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Reach up and hang from a bar with a grip slightly wider than shoulder-width and your palms facing away. With your shoulders completely relaxed, pull your shoulders down to initiate the movement. Pull yourself up through your elbows until your chin reaches the bar. Keeping your shoulders engaged, return to the starting position and then relax your shoulders. Perform for 3 sets of 2 reps."
+                android:id="@+id/pullupsText"
+                android:textSize="16sp"
+                android:layout_below="@id/pullupsButton"
+                android:visibility="gone"/>
+
+            <Button
+                android:text="Push Ups"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/round_button"
+                android:layout_below="@id/pullupsText"
+                android:id="@+id/pushUpsButton" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Support yourself on the floor with your hands directly underneath your shoulders and your feet together. Maintaining a straight back, lower yourself through your shoulders until your chest reaches the floor. Keep the elbows less than 45 degrees with the body. Without relaxing, push your body back up to the starting position. Perform for 3 sets of 8-12 reps."
+                android:id="@+id/pushUpsText"
+                android:textSize="16sp"
+                android:layout_below="@id/pushUpsButton"
+                android:visibility="gone"/>
+
+            <Button
+                android:text="Overhead Press"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/round_button"
+                android:layout_below="@id/pushUpsText"
+                android:id="@+id/overheadPressButton" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Grab a bar or dumbbells of suitable weight. Curl the weights up to shoulder height, flaring your elbows to the side. Push the weights up until the weights are directly overhead. Slowly return the weights to shoulder height. Remember to keep the back rigid to prevent rounding of the spine. Perform for 3 sets of 8-12 reps."
+                android:id="@+id/overheadPressText"
+                android:textSize="16sp"
+                android:layout_below="@id/overheadPressButton"
+                android:visibility="gone"/>
+
+            <Button
+                android:text="Squat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/round_button"
+                android:layout_below="@id/overheadPressText"
+                android:id="@+id/squatButton" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Find a bar(45 lbs) and adjust weight as necessary. If this is too heavy for you, try finding a lighter bar or squat without a bar. If you don’t have a bar, also squat without it. Keep the bar balanced on your back and trapeziuses (neck muscles). Keep your back straight and pinch your shoulder blades. Your feet should be slightly wider than shoulder width. Squat as low as you can comfortably while keeping your heels on the ground. Try to reach at least 90 degrees. Perform for 3 sets of 8-12 reps."
+                android:id="@+id/squatText"
+                android:textSize="16sp"
+                android:layout_below="@id/squatButton"
+                android:visibility="gone"/>
+
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
