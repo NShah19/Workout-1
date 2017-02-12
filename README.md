@@ -1,0 +1,3 @@
+# Workout
+Hack on the Hill 2 Hackathon Project
+This is an Android app to allow users to customize their fitness routine and workout without having to touch their phone to see their routine.  The coolest feature is the text to speech commands, which tells you your next set of exercises as you exercise.  All you have to do is put in your routine, press start, and the app will tell you your first exercise.  When you say "Done" into the microphone, the app automatically moves onto the next exercise, with variable breaks in between if needed. It's main goal is to allow gym-goers to plug in their headphones, put on some music, and work out without having to touch their phone again.
